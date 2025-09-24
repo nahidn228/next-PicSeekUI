@@ -1,3 +1,4 @@
+import Footer from "./shared/Footer";
 import { NavbarPicSeek } from "./shared/Navbar";
 
 const PublicLayout = ({
@@ -11,6 +12,7 @@ const PublicLayout = ({
         <NavbarPicSeek />
       </div>
       <main className="min-h-dvh">{children}</main>
+      <Footer />
     </>
   );
 };
