@@ -7,7 +7,9 @@ const PublicLayout = ({
 }>) => {
   return (
     <>
-      {/* <NavbarPicSeek /> */}
+      <div className="sticky top-2 w-full">
+        <NavbarPicSeek />
+      </div>
       <main className="min-h-dvh">{children}</main>
     </>
   );
