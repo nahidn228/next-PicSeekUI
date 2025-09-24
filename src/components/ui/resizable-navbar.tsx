@@ -9,6 +9,7 @@ import {
 } from "framer-motion";
 
 import Image from "next/image";
+import Link from "next/link";
 
 import React, { useRef, useState } from "react";
 
@@ -196,7 +197,6 @@ export const MobileNavMenu = ({
   children,
   className,
   isOpen,
-  onClose,
 }: MobileNavMenuProps) => {
   return (
     <AnimatePresence>
@@ -233,18 +233,24 @@ export const MobileNavToggle = ({
 
 export const NavbarLogo = () => {
   return (
-    <a
-      href="#"
-      className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black"
+    <Link
+      href="/"
+      className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal "
     >
-      <Image
-        src="https://assets.aceternity.com/logo-dark.png"
-        alt="logo"
-        width={30}
-        height={30}
-      />
-      <span className="font-medium text-black dark:text-white">Startup</span>
-    </a>
+      <div className="flex items-center gap-1 md:gap-2">
+        <div>
+          <Image
+            src="https://img.icons8.com/?size=96&id=8gR77jBNhfyz&format=png"
+            alt="Blue Icon"
+            width={24}
+            height={20}
+          />
+        </div>
+        <span className="text-lg md:text-xl text-primary font-semibold  ">
+          PIC SEEK
+        </span>
+      </div>
+    </Link>
   );
 };
 

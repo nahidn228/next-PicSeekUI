@@ -1,4 +1,5 @@
 "use client";
+import { ModeToggle } from "@/components/darkMode/ModeToggle";
 import {
   Navbar,
   NavBody,
@@ -32,15 +33,17 @@ export function NavbarPicSeek() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <div >
+    <div>
       <Navbar>
         {/* Desktop Navigation */}
         <NavBody>
           <NavbarLogo />
           <NavItems items={navItems} />
           <div className="flex items-center gap-4">
-            <NavbarButton variant="secondary">Login</NavbarButton>
-            <NavbarButton variant="primary">Book a call</NavbarButton>
+            <NavbarButton className="px-0" variant="secondary">
+              <ModeToggle />
+            </NavbarButton>
+            <NavbarButton variant="primary">Login</NavbarButton>
           </div>
         </NavBody>
 
@@ -88,9 +91,7 @@ export function NavbarPicSeek() {
         </MobileNav>
       </Navbar>
 
-
       {/* Navbar */}
     </div>
   );
 }
-
