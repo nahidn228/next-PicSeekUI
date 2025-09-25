@@ -19,7 +19,7 @@ import {
 } from "@/components/ui/form";
 import { useState } from "react";
 import { Eye, EyeOff } from "lucide-react";
-
+import { signIn } from "next-auth/react";
 
 // ✅ Validation schema using zod
 const loginSchema = z.object({
@@ -51,9 +51,9 @@ export function LoginForm({
 
   const handleSocialLogin = (provider: "google" | "github") => {
     console.log(`Login with ${provider}`);
-    // signIn(provider, {
-    //   callbackUrl: "/dashboard",
-    // });
+    signIn(provider, {
+      callbackUrl: "/",
+    });
   };
 
   return (
@@ -133,9 +133,7 @@ export function LoginForm({
 
           {/* Divider */}
           <div className="after:border-border relative text-center text-sm after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after:border-t">
-            <span className=" relative z-10 px-2">
-              Or continue with
-            </span>
+            <span className=" relative z-10 px-2">Or continue with</span>
           </div>
 
           {/* GitHub login */}
