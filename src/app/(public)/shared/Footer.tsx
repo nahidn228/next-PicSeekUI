@@ -38,8 +38,8 @@ const Footer = () => {
               </div>
             </Link>
             <p className="text-base text-muted-foreground leading-relaxed">
-              Your modern digital library management system. Discover, borrow,
-              and manage books effortlessly.
+              Lets convert your creativity in the next level with Pic-Seek-AI.
+              Find, Analyze & Explore Images Smarter with AI!
             </p>
           </div>
 
@@ -180,14 +180,13 @@ const Footer = () => {
         </div>
 
         {/* Bottom section with glassmorphism effect */}
-        <div className="mt-8 pt-8 border-t border-[#7420E6]/20 text-center">
-          <div className="backdrop-blur-sm bg-card/30 rounded-lg p-4 border border-[#7420E6]/10">
+        <div className="mt-8 pt-8 border-t border-primary/20 text-center">
+         
             <p className="text-base text-muted-foreground font-mono">
-              © {new Date().getFullYear()} Paper
-              <span className="text-[#7420E6]">Trail</span>. All rights
-              reserved. Built for educational purposes.
+              © {new Date().getFullYear()} PIC SEEK. All rights reserved. Built
+              for educational purposes.
             </p>
-            <p className="text-base text-[#7420E6] dark:text-[#7420E6]/80 mt-2">
+            <p className="text-base text-muted-foreground hover:text-primary mt-2">
               <a
                 href="https://nahidhasan-portfolio.vercel.app/"
                 target="_blank"
@@ -201,7 +200,7 @@ const Footer = () => {
         {/* Decorative elements */}
         <div className="absolute bottom-0 left-8 w-1 h-16 bg-gradient-to-t from-[#7420E6]/40 to-transparent opacity-40"></div>
         <div className="absolute bottom-0 right-8 w-1 h-16 bg-gradient-to-t from-[#7420E6]/40 to-transparent opacity-40"></div>
-      </div>
+     
     </footer>
   );
 };

@@ -17,16 +17,16 @@ import { useState } from "react";
 export function NavbarPicSeek() {
   const navItems = [
     {
-      name: "Features",
-      link: "#features",
+      name: "Home",
+      link: "/",
     },
     {
-      name: "Pricing",
-      link: "#pricing",
+      name: "Create",
+      link: "/create",
     },
     {
-      name: "Contact",
-      link: "#contact",
+      name: "Creation",
+      link: "/creation",
     },
   ];
 
@@ -43,7 +43,9 @@ export function NavbarPicSeek() {
             <NavbarButton className="px-0" variant="secondary">
               <ModeToggle />
             </NavbarButton>
-            <NavbarButton variant="primary">Login</NavbarButton>
+            <NavbarButton href="/login" variant="primary">
+              Login
+            </NavbarButton>
           </div>
         </NavBody>
 
